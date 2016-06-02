@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E2066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HB5-yG-VWu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="lwn-Oy-zXY">
+            <objects>
+                <viewController id="HB5-yG-VWu" customClass="CardViewController" customModule="OneCardDraw" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YNY-Js-C2J"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bfg-Nw-R8e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UP8-FJ-6HM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmY-gd-alh">
+                                <rect key="frame" x="145" y="430" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="HB5-yG-VWu" eventType="touchUpInside" id="UzK-3T-kzT"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AMB-tO-GXN">
+                                <rect key="frame" x="8" y="28" width="304" height="394"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="slN-T9-jXp">
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="394"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VkQ-Gl-Igl">
+                                        <rect key="frame" x="152" y="0.0" width="152" height="394"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="YmY-gd-alh" secondAttribute="bottom" constant="20" symbolic="YES" id="8LM-nT-Hxe"/>
+                            <constraint firstItem="AMB-tO-GXN" firstAttribute="leading" secondItem="UP8-FJ-6HM" secondAttribute="leadingMargin" constant="-8" id="Fn0-Qy-ZmD"/>
+                            <constraint firstItem="AMB-tO-GXN" firstAttribute="top" secondItem="YNY-Js-C2J" secondAttribute="bottom" constant="8" symbolic="YES" id="Kx7-VX-mU3"/>
+                            <constraint firstItem="AMB-tO-GXN" firstAttribute="centerX" secondItem="UP8-FJ-6HM" secondAttribute="centerX" id="Tde-mX-geK"/>
+                            <constraint firstItem="YmY-gd-alh" firstAttribute="centerX" secondItem="AMB-tO-GXN" secondAttribute="centerX" id="VPg-Of-9Kw"/>
+                            <constraint firstItem="YmY-gd-alh" firstAttribute="top" secondItem="AMB-tO-GXN" secondAttribute="bottom" constant="8" symbolic="YES" id="rRS-9w-h1u"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="playerOneImageView" destination="slN-T9-jXp" id="XUG-sv-OKy"/>
+                        <outlet property="playerTwoImageView" destination="VkQ-Gl-Igl" id="RJa-PB-kyw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dyn-hO-1ZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="308"/>
+        </scene>
+    </scenes>
+</document>
